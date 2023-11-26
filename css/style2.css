@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --azul-escuro-principal: #05377f;
+    --azul-claro-destaque: #3886f7;
+    --azul-palido-acento: #8ca4fc;
+    --cinza-neutro: #827272;
+    --bege-background: #d8c4ad;
+    --cor-texto-branco: #ffffff;
+    --cor-texto-preto: #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color: blue;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bege-background);
+    margin: 0;
+}
+
+/* Cabeçalho */
+
+header, footer {
+    width: 100%;
+    display: flex;
+    height: 8rem;
+}
+
+header {
+    background-color: var(--azul-escuro-principal);
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.header-img, .header-nav {
+    height: 100%;
+    width: 50%;
+}
+
+.header-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.header-nav{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header-page-nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: fit-content;
+    padding: 0 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-style: bolder;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.header-page-nav:hover {
+    transform: scale(110%);
+}
+
+/* Conteudo Principal */
+
+main {
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tips {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tips-columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tip-card {
+    width: 48%;
+    margin: 1%;
+    text-align: justify;
+    background-color: var(--azul-palido-acento);
+    border-radius: 5px;
+    padding: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip-card p {
+    font-weight: bolder;
+    margin: 0 0 .5rem 0;
+}
+
+/* Rodapé */
+
+footer {
+    color: var(--cor-texto-branco);
+    background-color: var(--cinza-neutro);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+/* Tela iPhone 14 e 15 Pro */
+
+@media (max-width: 393px) {
+    main {
+        height: 100%;
+        width: 100%;
+        padding: 8rem 2rem 6rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .tips-columns {
+        flex-wrap: wrap;
+    }
+
+    .tip-card {
+        width: 100%;
+        margin: 1% 0;
+    }
+
+    footer {
+        font-size: 1rem;
+        text-align: center;
+        padding: 1rem;
+        line-height: normal;
+    }
+}
