@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -6,7 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-:root{
+:root {
     --azul-escuro-principal: #05377f;
     --azul-claro-destaque: #3886f7;
     --azul-palido-acento: #8ca4fc;
@@ -21,7 +21,7 @@ a {
     color: black;
 }
 
-a:visited{
+a:visited {
     color: blue;
 }
 
@@ -36,7 +36,8 @@ body {
 
 /* Cabeçalho */
 
-header, footer {
+header,
+footer {
     width: 100%;
     display: flex;
     height: 8rem;
@@ -49,7 +50,8 @@ header {
     list-style: none;
 }
 
-.header-img, .header-nav {
+.header-img,
+.header-nav {
     height: 100%;
     width: 50%;
 }
@@ -67,7 +69,7 @@ header {
     cursor: pointer;
 }
 
-.header-nav{
+.header-nav {
     height: 100%;
     width: 50%;
     display: flex;
@@ -96,15 +98,15 @@ header {
 /* Conteudo Principal */
 
 main {
-    height: 100%;
-    width: 100%;
+    flex-grow: 1;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.section-top, .section-bottom {
+.section-top,
+.section-bottom {
     height: 49%;
     width: 100%;
     display: flex;
@@ -131,16 +133,13 @@ main {
 
 #block1 {
     width: 73%;
-    background-color: aquamarine;
     background-image: url("../img/image.jpeg");
     background-position: 50rem;
-    
 }
 
 #block2 {
     width: 20%;
     margin-left: auto;
-    background-color: aqua;
     background-image: url("../img/image2.jpeg");
     background-position: 50rem;
 }
@@ -159,39 +158,29 @@ footer {
 /* Tela iPhone 14 e 15 Pro */
 
 @media (max-width: 393px) {
-    /* Adicione um estilo de reset */
-    body, h1, h2, h3, p, ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    main {
-        height: 100%;
-        width: 100%;
-        padding: 8rem 2rem 6rem 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
+    
 
     .header-img img {
-        max-width: 80%; /* Ajuste conforme necessário */
+        max-width: 80%;
     }
 
-    .section-top, .section-bottom {
-        height: 100%;
-        flex-direction: column; /* Ajuste para dispositivos menores */
+    .section-top,
+    .section-bottom {
+        height: auto;
+        width: 100%;
+        flex-direction: column;
     }
-
+    
     .column {
         width: 100%;
-        padding: 2rem; /* Ajuste conforme necessário */
+        margin-bottom: 2rem;
     }
 
-    #block1, #block2 {
+    #block1,
+    #block2 {
         width: 100%;
+        height: 150px;
+        margin-bottom: 2rem;
     }
 
     footer {
